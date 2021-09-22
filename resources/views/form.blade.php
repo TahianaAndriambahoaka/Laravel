@@ -9,14 +9,11 @@
 <body>
     <form action="traitementForm" method="POST">
         @csrf
-        <label>Login</label>&nbsp<input type="text" name="login" placeholder="login"/><br><br>
-        <label>Password</label>&nbsp<input type="password" name="password" placeholder="password"/><br><br>
+        <label>Login</label>&nbsp<input type="text" name="login" placeholder="login"/>
+        <span style="color:red">@error('login') {{$message}} @enderror</span><br><br>
+        <label>Password</label>&nbsp<input type="password" name="password" placeholder="password"/>
+        <span style="color:red">@error('password') {{$message}} @enderror</span><br><br>
         <button type="sumit">Login</button>
-        @if($errors->any())
-            @foreach($errors->all() as $error)
-                <li>{{$error}}</li>
-            @endforeach
-        @endif
     </form>
 </body>
 </html>
