@@ -8,10 +8,7 @@
 </head>
 <body>
     <x-header data="my data" />
-    <h1>Hello {{$user}}</h1>
-    @if (1==1)
-    <h1>oiafnsdn</h1>
-    @endif
+    <h1>Hello Page</h1>
     <x-testFooter />
 </body>
 </html>
