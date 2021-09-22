@@ -12,6 +12,11 @@
         <label>Login</label>&nbsp<input type="text" name="login" placeholder="login"/><br><br>
         <label>Password</label>&nbsp<input type="password" name="password" placeholder="password"/><br><br>
         <button type="sumit">Login</button>
+        @if($errors->any())
+            @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        @endif
     </form>
 </body>
 </html>
