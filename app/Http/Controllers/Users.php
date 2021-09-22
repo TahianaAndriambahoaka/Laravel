@@ -12,7 +12,10 @@ class Users extends Controller
     }
 
     public function check(Request $req) {
-        $req->validate(['login' => 'required', 'password' => 'required']);
+        $req->validate([
+            'login' => 'required | max:10',
+            'password' => 'required | min:5'
+        ]);
         return $req->input();
     }
 }
