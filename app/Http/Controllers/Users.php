@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class Users extends Controller
 {
     public function index($username) {
-        echo "Hello ".$username." from Users Controller";
+        return view('hello', ['user' => $username]);
+        // echo "Hello ".$username." from Users Controller";
     }
 }
