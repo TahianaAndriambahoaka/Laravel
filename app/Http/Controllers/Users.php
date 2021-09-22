@@ -12,6 +12,7 @@ class Users extends Controller
     }
 
     public function check(Request $req) {
+        $req->validate(['login' => 'required', 'password' => 'required']);
         return $req->input();
     }
 }
