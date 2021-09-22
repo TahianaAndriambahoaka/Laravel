@@ -30,3 +30,5 @@ Route::get('users/{user}', [Users::class, 'index']);
 Route::view('/login', 'form');
 
 Route::post('/traitementForm', [Users::class, 'check']);
+
+Route::view('/noAccess', 'noAccess');
