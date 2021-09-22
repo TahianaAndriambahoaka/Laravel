@@ -7,8 +7,11 @@
     <title>Hello Page</title>
 </head>
 <body>
-    <x-header />
+    <x-header data="my data" />
     <h1>Hello {{$user}}</h1>
+    @if (1==1)
+    <h1>oiafnsdn</h1>
+    @endif
     <x-testFooter />
 </body>
 </html>
