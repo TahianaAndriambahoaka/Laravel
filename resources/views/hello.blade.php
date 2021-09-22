@@ -7,6 +7,8 @@
     <title>Hello Page</title>
 </head>
 <body>
-    <h1>Hello Page</h1>
+    <x-header />
+    <h1>Hello {{$user}}</h1>
+    <x-testFooter />
 </body>
 </html>
