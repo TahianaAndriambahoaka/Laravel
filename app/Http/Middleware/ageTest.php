@@ -16,7 +16,9 @@ class ageTest
      */
     public function handle(Request $request, Closure $next)
     {
-        // echo "test of middleware";
+        if ($request->age && $request->age < 10) {
+            return redirect('/noAccess');
+        }
         return $next($request);
     }
 }
