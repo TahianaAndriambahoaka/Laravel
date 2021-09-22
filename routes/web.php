@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/hello.{param}', function ($param) {
-    // echo $param;
     return view('hello', ['name' => $param]);
 });
 
