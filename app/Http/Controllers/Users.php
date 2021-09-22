@@ -10,4 +10,8 @@ class Users extends Controller
         return view('hello', ['user' => $username]);
         // echo "Hello ".$username." from Users Controller";
     }
+
+    public function check(Request $req) {
+        return $req->input();
+    }
 }
